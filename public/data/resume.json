@@ -1,14 +1,44 @@
-const RESUME_DEFAULT_DATA = {
+{
   "profile": {
     "name": "Sindhuri Alugolu",
     "subtitle": "Soft Skills Trainer | Communication Specialist",
-    "photo": "images/sindhu.png",
+    "title": "Soft Skills Trainer · Communication Specialist",
+    "photo": "/images/sindhu.png",
     "phone": "+919390828532",
     "phoneDisplay": "+91 9390828532",
     "email": "sindhudimple.08@gmail.com",
-    "location": "Visakhapatnam, Andhra Pradesh"
+    "location": "Visakhapatnam, Andhra Pradesh",
+    "heroBadge": "Available for Training & Consulting",
+    "heroBio": "Empowering learners across hospitality, aviation, corporate, and academic sectors through engaging communication training, curriculum design, and workplace readiness programs.",
+    "contactCTA": "Open to corporate training, guest faculty roles, curriculum consulting, and workshop facilitation."
   },
+  "stats": [
+    {
+      "num": "7,000+",
+      "label": "Students Trained"
+    },
+    {
+      "num": "200+",
+      "label": "Batches Delivered"
+    },
+    {
+      "num": "10+",
+      "label": "Years Experience"
+    },
+    {
+      "num": "3",
+      "label": "Languages"
+    }
+  ],
   "summary": "Dedicated Soft Skills Trainer and freelance content creator with extensive experience training learners across hospitality, aviation, IT, and corporate sectors. Skilled in curriculum design, webinar facilitation, and delivering engaging programs focused on communication, interpersonal skills, and professional development to enhance employability and personal growth. Proven contribution to community development through impactful CSR initiatives, government college workshops, and corporate training programs.",
+  "about": {
+    "label": "About Me",
+    "heading": "Transforming Communication, Building Confidence",
+    "paragraphs": [
+      "Dedicated Soft Skills Trainer and freelance content creator with extensive experience training learners across hospitality, aviation, IT, and corporate sectors. Skilled in curriculum design, webinar facilitation, and delivering engaging programs focused on communication, interpersonal skills, and professional development.",
+      "Proven contribution to community development through impactful CSR initiatives, government college workshops under PM-USHA GIEI Scheme, and corporate training programs. A sanguine and adaptable professional with a passion for empowering others to reach their full potential."
+    ]
+  },
   "competencies": [
     "Communication & Public Speaking",
     "Soft Skills & Personality Development",
@@ -19,11 +49,12 @@ const RESUME_DEFAULT_DATA = {
     "Employee Development & Motivation",
     "CSR Initiatives & Community Engagement"
   ],
+  "experienceIntro": "A decade of training excellence across corporate, academic, and community settings.",
   "experience": [
     {
       "id": "exp-1",
-      "title": "Freelancer \u2014 Content Creation & Curriculum Design | Vasishta 360 Channel",
-      "date": "2024 \u2013 Present (~2 years)",
+      "title": "Freelancer — Content Creation & Curriculum Design | Vasishta 360 Channel",
+      "date": "2024 – Present (~2 years)",
       "bullets": [
         "Curated engaging English language curriculums for diverse learner groups, focusing on vocabulary building and communication skills.",
         "Conceptualized and conducted interactive webinars on vocabulary enhancement and effective communication.",
@@ -34,7 +65,7 @@ const RESUME_DEFAULT_DATA = {
     {
       "id": "exp-2",
       "title": "English Language cum Soft Skills Trainer | CMS Labs (Crystal Management Services) & SDI",
-      "date": "Aug 2024 \u2013 Present (~1\u20132 years)",
+      "date": "Aug 2024 – Present (~1–2 years)",
       "bullets": [
         "Impart English language skills to pupils registered under the Skill Development Institute (SDI) collaboration project.",
         "Integrated soft skills training as a key employability factor, training beneficiaries on industry-relevant interpersonal and workplace skills.",
@@ -44,8 +75,8 @@ const RESUME_DEFAULT_DATA = {
     },
     {
       "id": "exp-3",
-      "title": "Consultant Faculty \u2014 Etiquette Trainer | Sumedha Hotel Management & Aviation",
-      "date": "2024 \u2013 Present (~1\u20132 years)",
+      "title": "Consultant Faculty — Etiquette Trainer | Sumedha Hotel Management & Aviation",
+      "date": "2024 – Present (~1–2 years)",
       "bullets": [
         "Served as consultant and guest faculty for hotel management and aviation colleges across multiple institutions.",
         "Designed and conducted industry-relevant etiquette and soft skills programs for hospitality and aviation sectors.",
@@ -54,8 +85,8 @@ const RESUME_DEFAULT_DATA = {
     },
     {
       "id": "exp-4",
-      "title": "Consultant \u2014 Communication & Soft Skills Trainer | ShriG's (Dockyard Training Programs)",
-      "date": "2024 \u2013 2025 (~1 year)",
+      "title": "Consultant — Communication & Soft Skills Trainer | ShriG's (Dockyard Training Programs)",
+      "date": "2024 – 2025 (~1 year)",
       "bullets": [
         "Delivered specialized communication and soft skills training for dockyard employees under programs owned by ShriG's.",
         "Customized training methodologies for a high-performance, technical work environment.",
@@ -112,26 +143,28 @@ const RESUME_DEFAULT_DATA = {
         "id": "proj-1",
         "title": "Personality Development for Confident Self-Presentation",
         "date": "3 January 2026",
-        "role": "Resource Person \u2014 Corporate Trainer, Communication & Soft Skills",
+        "tag": "Jan 2026",
+        "role": "Resource Person — Corporate Trainer, Communication & Soft Skills",
         "organisedBy": "Government Degree College, Paderu (A.S.R District)",
         "conductedBy": "Crystal Management Services (CMS Skill Center)",
-        "image": "images/workshop-personality-development.png",
+        "image": "/images/workshop-personality-development.svg",
         "alt": "Workshop on Personality Development for Confident Self-Presentation"
       },
       {
         "id": "proj-2",
         "title": "Understanding & Addressing Domestic Violence",
         "date": "31 January 2026",
-        "role": "Resource Person \u2014 Corporate Trainer, Communication & Soft Skills",
+        "tag": "Jan 2026",
+        "role": "Resource Person — Corporate Trainer, Communication & Soft Skills",
         "organisedBy": "Government Degree College (Women), Marripalem, Koyyuru Mandal",
         "conductedBy": "Crystal Management Services (CMS Skill Center)",
-        "image": "images/workshop-domestic-violence.png",
+        "image": "/images/workshop-domestic-violence.svg",
         "alt": "Workshop on Understanding and Addressing Domestic Violence"
       }
     ]
   },
   "jobDescription": {
-    "title": "Core Job Description \u2014 English Language cum Soft Skill Trainer",
+    "title": "Core Job Description — English Language cum Soft Skill Trainer",
     "items": [
       "Impart English language skills to registered learners and integrate soft skills that enhance employability.",
       "Train beneficiaries on industry-relevant soft skills across diverse domains.",
@@ -143,7 +176,7 @@ const RESUME_DEFAULT_DATA = {
   },
   "education": [
     {
-      "degree": "Bachelor of Technology (B.Tech) \u2014 Information Technology",
+      "degree": "Bachelor of Technology (B.Tech) — Information Technology",
       "school": "Aditya College of Engineering & Information Technology, JNTU Kakinada"
     },
     {
@@ -162,6 +195,11 @@ const RESUME_DEFAULT_DATA = {
     "PHP",
     "Java",
     "Android"
+  ],
+  "languages": [
+    "Telugu",
+    "English",
+    "Hindi"
   ],
   "achievements": [
     "Featured in newspapers for impactful training sessions on interview skills and personality development.",
@@ -222,4 +260,4 @@ const RESUME_DEFAULT_DATA = {
     "place": "Visakhapatnam",
     "signature": "Sindhuri Alugolu"
   }
-};
+}

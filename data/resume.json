@@ -2,13 +2,43 @@
   "profile": {
     "name": "Sindhuri Alugolu",
     "subtitle": "Soft Skills Trainer | Communication Specialist",
-    "photo": "images/sindhu.png",
+    "title": "Soft Skills Trainer · Communication Specialist",
+    "photo": "/images/sindhu.png",
     "phone": "+919390828532",
     "phoneDisplay": "+91 9390828532",
     "email": "sindhudimple.08@gmail.com",
-    "location": "Visakhapatnam, Andhra Pradesh"
+    "location": "Visakhapatnam, Andhra Pradesh",
+    "heroBadge": "Available for Training & Consulting",
+    "heroBio": "Empowering learners across hospitality, aviation, corporate, and academic sectors through engaging communication training, curriculum design, and workplace readiness programs.",
+    "contactCTA": "Open to corporate training, guest faculty roles, curriculum consulting, and workshop facilitation."
   },
+  "stats": [
+    {
+      "num": "7,000+",
+      "label": "Students Trained"
+    },
+    {
+      "num": "200+",
+      "label": "Batches Delivered"
+    },
+    {
+      "num": "10+",
+      "label": "Years Experience"
+    },
+    {
+      "num": "3",
+      "label": "Languages"
+    }
+  ],
   "summary": "Dedicated Soft Skills Trainer and freelance content creator with extensive experience training learners across hospitality, aviation, IT, and corporate sectors. Skilled in curriculum design, webinar facilitation, and delivering engaging programs focused on communication, interpersonal skills, and professional development to enhance employability and personal growth. Proven contribution to community development through impactful CSR initiatives, government college workshops, and corporate training programs.",
+  "about": {
+    "label": "About Me",
+    "heading": "Transforming Communication, Building Confidence",
+    "paragraphs": [
+      "Dedicated Soft Skills Trainer and freelance content creator with extensive experience training learners across hospitality, aviation, IT, and corporate sectors. Skilled in curriculum design, webinar facilitation, and delivering engaging programs focused on communication, interpersonal skills, and professional development.",
+      "Proven contribution to community development through impactful CSR initiatives, government college workshops under PM-USHA GIEI Scheme, and corporate training programs. A sanguine and adaptable professional with a passion for empowering others to reach their full potential."
+    ]
+  },
   "competencies": [
     "Communication & Public Speaking",
     "Soft Skills & Personality Development",
@@ -19,6 +49,7 @@
     "Employee Development & Motivation",
     "CSR Initiatives & Community Engagement"
   ],
+  "experienceIntro": "A decade of training excellence across corporate, academic, and community settings.",
   "experience": [
     {
       "id": "exp-1",
@@ -112,20 +143,22 @@
         "id": "proj-1",
         "title": "Personality Development for Confident Self-Presentation",
         "date": "3 January 2026",
+        "tag": "Jan 2026",
         "role": "Resource Person — Corporate Trainer, Communication & Soft Skills",
         "organisedBy": "Government Degree College, Paderu (A.S.R District)",
         "conductedBy": "Crystal Management Services (CMS Skill Center)",
-        "image": "images/workshop-personality-development.png",
+        "image": "/images/workshop-personality-development.svg",
         "alt": "Workshop on Personality Development for Confident Self-Presentation"
       },
       {
         "id": "proj-2",
         "title": "Understanding & Addressing Domestic Violence",
         "date": "31 January 2026",
+        "tag": "Jan 2026",
         "role": "Resource Person — Corporate Trainer, Communication & Soft Skills",
         "organisedBy": "Government Degree College (Women), Marripalem, Koyyuru Mandal",
         "conductedBy": "Crystal Management Services (CMS Skill Center)",
-        "image": "images/workshop-domestic-violence.png",
+        "image": "/images/workshop-domestic-violence.svg",
         "alt": "Workshop on Understanding and Addressing Domestic Violence"
       }
     ]
@@ -163,6 +196,11 @@
     "Java",
     "Android"
   ],
+  "languages": [
+    "Telugu",
+    "English",
+    "Hindi"
+  ],
   "achievements": [
     "Featured in newspapers for impactful training sessions on interview skills and personality development.",
     "Recognized for effective business communication training and email etiquette.",
@@ -186,14 +224,36 @@
   "personalSnapshot": {
     "personality": "A sanguine and buoyant individual with a positive outlook toward challenges and opportunities. My agnostic approach enables adaptability to new ideas and perspectives, helping me navigate complex situations with an open mind.",
     "traits": [
-      { "title": "Strong Communicator", "desc": "Effective interpersonal skills" },
-      { "title": "Detail-Oriented", "desc": "Meticulous attention to quality" },
-      { "title": "Adaptable & Proactive", "desc": "Quick to embrace change" },
-      { "title": "Results-Driven", "desc": "Strong work ethic and focus" }
+      {
+        "title": "Strong Communicator",
+        "desc": "Effective interpersonal skills"
+      },
+      {
+        "title": "Detail-Oriented",
+        "desc": "Meticulous attention to quality"
+      },
+      {
+        "title": "Adaptable & Proactive",
+        "desc": "Quick to embrace change"
+      },
+      {
+        "title": "Results-Driven",
+        "desc": "Strong work ethic and focus"
+      }
     ],
-    "pursuits": ["Literature & Creative Writing", "Crafting & DIY Projects", "Gardening & Nature"],
-    "shortTermGoals": ["Writing & Creative Expression", "Personal Development"],
-    "longTermGoals": ["Pursue Psychology Studies", "Research & Practice Contribution"]
+    "pursuits": [
+      "Literature & Creative Writing",
+      "Crafting & DIY Projects",
+      "Gardening & Nature"
+    ],
+    "shortTermGoals": [
+      "Writing & Creative Expression",
+      "Personal Development"
+    ],
+    "longTermGoals": [
+      "Pursue Psychology Studies",
+      "Research & Practice Contribution"
+    ]
   },
   "declaration": {
     "text": "I hereby declare that the information provided above is accurate and true to the best of my knowledge.",

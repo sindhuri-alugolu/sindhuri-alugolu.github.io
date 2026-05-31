@@ -1,45 +1,89 @@
 # Sindhuri Alugolu — Portfolio
 
-Professional portfolio and admin editor for [Sindhuri Alugolu](https://github.com/Sindhu-9999-hash).
+A modern portfolio website for **Sindhuri Alugolu**, Soft Skills Trainer & Communication Specialist (Visakhapatnam, India). Built with **Next.js**, **React**, and **TypeScript**, deployed on **GitHub Pages**.
 
-## Live URLs (after deploy)
+## Live site
 
-| Page | Path |
+| Route | Purpose |
 |---|---|
-| Portfolio (resume) | `/sindhu.html` |
-| Public website | `/sindhu-website.html` |
-| Admin editor | `/sindhu-admin.html` |
+| `/` | Public portfolio homepage |
+| `/resume` | Full CV / resume + print-to-PDF |
+| `/admin` | Simple content editor |
 
-## For Sindhu — editing your portfolio
-
-1. Open **Admin** (`/sindhu-admin.html`)
-2. Edit your details
-3. Tap **Save** — updates your portfolio immediately
-4. Tap **Preview** — opens your portfolio page
+**Production URL:** [https://sindhuri-alugolu.github.io](https://sindhuri-alugolu.github.io)
 
 ## Local development
 
 ```bash
 npm install
-npm start
+cp .env.example .env.local
+npm run dev
 ```
 
-Open http://localhost:3000/sindhu-admin.html
+Open [http://localhost:3000](http://localhost:3000). Admin saves write to `data/resume.json` locally (no GitHub token needed in dev).
 
-## Deploy on Render (free)
+## GitHub Pages setup (one-time)
 
-1. Push this repo to GitHub
-2. Go to [render.com](https://render.com) → **New +** → **Blueprint**
-3. Connect the `Sindhu-9999-hash/portfolio` repo
-4. Render reads `render.yaml` and deploys automatically
-5. Share the Render URL with Sindhu for admin + portfolio
+### 1. Enable GitHub Pages
 
-## Project structure
+In your repo on GitHub:
 
+1. **Settings → Pages**
+2. Under **Build and deployment**, set **Source** to **GitHub Actions**
+
+### 2. Add repository secrets
+
+**Settings → Secrets and variables → Actions → New repository secret**
+
+| Secret | Description |
+|---|---|
+| `ADMIN_GITHUB_TOKEN` | [Personal access token](https://github.com/settings/tokens) with **Contents: Read and write** for this repo |
+
+Add any other secrets listed in `.env.example`.
+
+The token lets the admin **Save** button commit updated content to GitHub. The site redeploys automatically within a few minutes.
+
+### 3. Push to `main`
+
+Every push to `main` runs `.github/workflows/deploy-pages.yml` and publishes the site.
+
+```bash
+git push origin main
 ```
-sindhu.html          ← Portfolio page (loads from data/resume.json)
-sindhu-website.html  ← Public website (static)
-sindhu-admin.html    ← Edit page (Save + Preview)
-data/resume.json     ← All portfolio content
-server.js            ← Serves site + save API
-```
+
+## How admin Save works on GitHub Pages
+
+1. Sindhu opens `/admin` and signs in
+2. She edits content and clicks **Save**
+3. The site commits `data/resume.json` and `public/data/resume.json` to GitHub
+4. GitHub Actions rebuilds and redeploys the site (~2 minutes)
+
+**Preview** saves first, then opens the homepage in a new tab.
+
+## Build commands
+
+| Command | Use |
+|---|---|
+| `npm run dev` | Local development with file-based save |
+| `npm run build` | Standard Next.js build (local / optional hosting) |
+| `npm run build:pages` | Static export for GitHub Pages (same as CI) |
+
+## Replacing photos
+
+Replace placeholder SVGs in `public/images/` with real photos:
+
+- `sindhu.png` — profile photo
+- `workshop-personality-development.svg`
+- `workshop-domestic-violence.svg`
+
+Update paths in admin if you change filenames.
+
+## Download resume as PDF
+
+On `/resume`, click **Download PDF** → choose “Save as PDF” in the print dialog.
+
+## Contact
+
+- Phone: +91 9390828532
+- Email: sindhudimple.08@gmail.com
+- Location: Visakhapatnam, Andhra Pradesh
