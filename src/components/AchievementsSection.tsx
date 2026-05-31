@@ -16,7 +16,7 @@ function iconForAchievement(text: string): LucideIcon {
   if (lower.includes("animal") || lower.includes("welfare") || lower.includes("environmental"))
     return PawPrint;
   if (lower.includes("interview panel")) return ClipboardCheck;
-  if (lower.includes("7,000") || lower.includes("batches")) return Users;
+  if (lower.includes("10,000") || lower.includes("7,000") || lower.includes("batches")) return Users;
   if (lower.includes("mentor") || lower.includes("volunteer")) return Heart;
   if (lower.includes("communication") || lower.includes("recogniz")) return Award;
   return Award;

@@ -35,19 +35,13 @@ function ExperienceCard({ item, isLast }: { item: ExperienceItem; isLast?: boole
       {!isLast && <span className="absolute left-[1.125rem] top-14 h-[calc(100%+1rem)] w-0.5 bg-gradient-to-b from-blue-200 to-blue-100 md:left-[1.375rem]" aria-hidden />}
 
       <div className="section-panel card-shine group p-6 md:p-8">
-        <div className="flex flex-wrap items-start justify-between gap-3">
-          <div className="min-w-0 flex-1">
-            <h3 className="text-base font-semibold leading-snug text-text md:text-[1.0625rem]">
-              {role}
-            </h3>
-            {org && (
-              <p className="mt-1.5 text-sm font-medium text-accent">{org}</p>
-            )}
-          </div>
-          <span className="shrink-0 rounded-full bg-blue-50 px-3 py-1 text-[0.6875rem] font-bold uppercase tracking-wide text-accent-dark">
-            {item.date}
-          </span>
-        </div>
+        <span className="mb-3 inline-flex w-fit max-w-full rounded-full bg-blue-50 px-3 py-1 text-[0.6875rem] font-bold uppercase leading-snug tracking-wide text-accent-dark">
+          {item.date}
+        </span>
+        <h3 className="text-base font-semibold leading-snug text-text md:text-[1.0625rem]">
+          {role}
+        </h3>
+        {org && <p className="mt-1.5 text-sm font-medium text-accent">{org}</p>}
 
         <ul className="mt-5 space-y-2.5 border-t border-border/80 pt-5">
           {item.bullets.map((bullet) => (

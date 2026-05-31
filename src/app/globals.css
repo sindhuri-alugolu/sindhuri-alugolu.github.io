@@ -406,4 +406,29 @@ body {
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
   }
+
+  .resume-one-page-container {
+    width: 100% !important;
+    max-width: 100% !important;
+    font-size: 9pt;
+    line-height: 1.35;
+  }
+
+  .resume-one-page .resume-one-page-heading {
+    font-size: 8pt;
+    margin-bottom: 0.35rem;
+  }
+
+  .resume-one-page-grid {
+    gap: 0.75rem;
+  }
+}
+
+.resume-one-page-heading {
+  margin-bottom: 0.5rem;
+  font-size: 0.625rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #2563eb;
 }

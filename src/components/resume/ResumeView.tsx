@@ -1,7 +1,5 @@
 import Image from "next/image";
-import Link from "next/link";
 import {
-  ArrowLeft,
   Briefcase,
   CheckCircle,
   GraduationCap,
@@ -13,7 +11,7 @@ import {
   Target,
   User,
 } from "lucide-react";
-import DownloadPdfButton from "./DownloadPdfButton";
+import ResumeToolbar from "./ResumeToolbar";
 import type { PortfolioContent } from "@/lib/types";
 
 interface ResumeViewProps {
@@ -25,18 +23,10 @@ export default function ResumeView({ content }: ResumeViewProps) {
 
   return (
     <div className="resume-page min-h-screen bg-[#f9f9f9] pb-12 print:bg-white print:pb-0">
-      <div className="no-print sticky top-0 z-50 border-b border-border bg-white/90 backdrop-blur-md">
-        <div className="mx-auto flex w-[min(1000px,calc(100%-2rem))] items-center justify-between py-3">
-          <Link
-            href="/"
-            className="inline-flex items-center gap-2 text-sm font-medium text-accent hover:text-accent-dark"
-          >
-            <ArrowLeft size={16} />
-            Back to Portfolio
-          </Link>
-          <DownloadPdfButton />
-        </div>
-      </div>
+      <ResumeToolbar
+        variant="full"
+        downloadName="Sindhuri-Alugolu-Full-Resume"
+      />
 
       <article className="resume-container mx-auto my-5 w-[min(1000px,calc(100%-2rem))] rounded-[10px] bg-white p-5 shadow-[0_0_20px_rgba(0,0,0,0.1)] print:my-0 print:shadow-none">
         {/* Header */}

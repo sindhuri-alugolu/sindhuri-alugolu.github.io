@@ -2,15 +2,26 @@
 
 import { Download } from "lucide-react";
 
-export default function DownloadPdfButton() {
+interface DownloadPdfButtonProps {
+  filename?: string;
+  label?: string;
+}
+
+export default function DownloadPdfButton({
+  filename = "Sindhuri-Alugolu-Resume",
+  label = "Download PDF",
+}: DownloadPdfButtonProps) {
+  const handlePrint = () => {
+    const previousTitle = document.title;
+    document.title = filename;
+    window.print();
+    document.title = previousTitle;
+  };
+
   return (
-    <button
-      type="button"
-      onClick={() => window.print()}
-      className="no-print btn btn-primary"
-    >
+    <button type="button" onClick={handlePrint} className="no-print btn btn-primary">
       <Download size={16} />
-      Download PDF
+      {label}
     </button>
   );
 }

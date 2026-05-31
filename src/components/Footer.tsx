@@ -17,7 +17,14 @@ export default function Footer() {
             href="/resume"
             className="inline-flex items-center gap-1 font-medium text-slate-300 transition-colors hover:text-blue-200"
           >
-            Resume
+            Full CV
+            <ArrowUpRight size={14} />
+          </Link>
+          <Link
+            href="/resume/one-page"
+            className="inline-flex items-center gap-1 font-medium text-slate-300 transition-colors hover:text-blue-200"
+          >
+            One-Page CV
             <ArrowUpRight size={14} />
           </Link>
           <a
