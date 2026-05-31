@@ -73,8 +73,9 @@ git push origin main
 Replace placeholder SVGs in `public/images/` with real photos:
 
 - `sindhu.png` — profile photo
-- `workshop-personality-development.svg`
-- `workshop-domestic-violence.svg`
+- `workshop-personality-development.png`
+- `workshop-domestic-violence.png`
+- `workshop-crpf-batch.png`
 
 Update paths in admin if you change filenames.
 

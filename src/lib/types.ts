@@ -2,6 +2,7 @@ export interface Profile {
   name: string;
   subtitle: string;
   photo: string;
+  heroPhoto?: string;
   phone: string;
   phoneDisplay: string;
   email: string;

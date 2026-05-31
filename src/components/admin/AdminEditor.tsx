@@ -372,7 +372,7 @@ export default function AdminEditor({ initialData }: AdminEditorProps) {
                       role: "",
                       organisedBy: "",
                       conductedBy: "",
-                      image: "/images/workshop-personality-development.svg",
+                      image: "/images/workshop-personality-development.png",
                       alt: "",
                     },
                     ...d.projects.items,

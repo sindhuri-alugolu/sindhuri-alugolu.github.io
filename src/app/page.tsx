@@ -17,7 +17,7 @@ export default async function HomePage() {
     <>
       <Nav />
       <main>
-        <Hero profile={content.profile} />
+        <Hero profile={content.profile} stats={content.stats} />
         <StatsBar stats={content.stats} />
         <AboutSection about={content.about} competencies={content.competencies} />
         <ExperienceSection intro={content.experienceIntro} experience={content.experience} />

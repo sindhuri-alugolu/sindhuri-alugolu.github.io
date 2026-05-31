@@ -29,7 +29,14 @@ export const metadata: Metadata = {
       "Communication Specialist | Curriculum Designer | Corporate Trainer",
     type: "website",
     locale: "en_IN",
-    images: [{ url: "/images/sindhu.png", width: 400, height: 400, alt: "Sindhuri Alugolu" }],
+    images: [{ url: "/images/sindhu.jpeg", width: 749, height: 646, alt: "Sindhuri Alugolu" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Sindhuri Alugolu — Soft Skills Trainer",
+    description:
+      "Communication Specialist | Curriculum Designer | Corporate Trainer",
+    images: ["/images/sindhu.jpeg"],
   },
 };
 

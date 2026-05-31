@@ -4,6 +4,7 @@
     "subtitle": "Soft Skills Trainer | Communication Specialist",
     "title": "Soft Skills Trainer · Communication Specialist",
     "photo": "/images/sindhu.png",
+    "heroPhoto": "/images/sindhu-color.png",
     "phone": "+919390828532",
     "phoneDisplay": "+91 9390828532",
     "email": "sindhudimple.08@gmail.com",
@@ -24,10 +25,6 @@
     {
       "num": "10+",
       "label": "Years Experience"
-    },
-    {
-      "num": "3",
-      "label": "Languages"
     }
   ],
   "summary": "Dedicated Soft Skills Trainer and freelance content creator with extensive experience training learners across hospitality, aviation, IT, and corporate sectors. Skilled in curriculum design, webinar facilitation, and delivering engaging programs focused on communication, interpersonal skills, and professional development to enhance employability and personal growth. Proven contribution to community development through impactful CSR initiatives, government college workshops, and corporate training programs.",
@@ -52,6 +49,16 @@
   "experienceIntro": "A decade of training excellence across corporate, academic, and community settings.",
   "experience": [
     {
+      "id": "exp-0",
+      "title": "Consultant — Soft Skills & Training | Learnet Skills Limited",
+      "date": "Jan 30, 2026 – Mar 31, 2026",
+      "bullets": [
+        "Engaged as consultant on contract basis at AP Common, Andhra Pradesh.",
+        "Delivering soft skills, IT skills, and employability training aligned with Learnet Skills programs.",
+        "Supporting learner grooming, interview preparation, teamwork, and group discussion activities."
+      ]
+    },
+    {
       "id": "exp-1",
       "title": "Freelancer — Content Creation & Curriculum Design | Vasishta 360 Channel",
       "date": "2024 – Present (~2 years)",
@@ -65,7 +72,7 @@
     {
       "id": "exp-2",
       "title": "English Language cum Soft Skills Trainer | CMS Labs (Crystal Management Services) & SDI",
-      "date": "Aug 2024 – Present (~1–2 years)",
+      "date": "Aug 2024 – (~1–2 years)",
       "bullets": [
         "Impart English language skills to pupils registered under the Skill Development Institute (SDI) collaboration project.",
         "Integrated soft skills training as a key employability factor, training beneficiaries on industry-relevant interpersonal and workplace skills.",
@@ -76,7 +83,7 @@
     {
       "id": "exp-3",
       "title": "Consultant Faculty — Etiquette Trainer | Sumedha Hotel Management & Aviation",
-      "date": "2024 – Present (~1–2 years)",
+      "date": "2024 – 2025",
       "bullets": [
         "Served as consultant and guest faculty for hotel management and aviation colleges across multiple institutions.",
         "Designed and conducted industry-relevant etiquette and soft skills programs for hospitality and aviation sectors.",
@@ -96,7 +103,7 @@
     {
       "id": "exp-5",
       "title": "Manager | Libonji Creations, Chingola, Zambia",
-      "date": "May 10, 2023 - Feb 20, 2023",
+      "date": "May 10, 2022 – Feb 20, 2023",
       "bullets": [
         "Managed operations, employee relations, and compliance at a recreational center.",
         "Designed and conducted training workshops for employees."
@@ -137,7 +144,7 @@
     }
   ],
   "projects": {
-    "intro": "Selected government college workshops conducted as Resource Person through Crystal Management Services (CMS Skill Center) under PM-USHA GIEI Scheme grants.",
+    "intro": "Government college workshops, CRPF-sponsored placement-linked training, and CSR skill development programs through Crystal Management Services (CMS Skill Center).",
     "items": [
       {
         "id": "proj-1",
@@ -147,7 +154,7 @@
         "role": "Resource Person — Corporate Trainer, Communication & Soft Skills",
         "organisedBy": "Government Degree College, Paderu (A.S.R District)",
         "conductedBy": "Crystal Management Services (CMS Skill Center)",
-        "image": "/images/workshop-personality-development.svg",
+        "image": "/images/workshop-personality-development.png",
         "alt": "Workshop on Personality Development for Confident Self-Presentation"
       },
       {
@@ -158,8 +165,19 @@
         "role": "Resource Person — Corporate Trainer, Communication & Soft Skills",
         "organisedBy": "Government Degree College (Women), Marripalem, Koyyuru Mandal",
         "conductedBy": "Crystal Management Services (CMS Skill Center)",
-        "image": "/images/workshop-domestic-violence.svg",
+        "image": "/images/workshop-domestic-violence.png",
         "alt": "Workshop on Understanding and Addressing Domestic Violence"
+      },
+      {
+        "id": "proj-3",
+        "title": "Placement Linked Skill Development Training — Life Sciences",
+        "date": "29 December 2024 – 16 February 2025",
+        "tag": "Dec 2024",
+        "role": "Soft Skills & Employability Trainer",
+        "organisedBy": "CRPF, Battalion 234 B/N",
+        "conductedBy": "Crystal Management Services (CMS Skill Center)",
+        "image": "/images/workshop-crpf-batch.png",
+        "alt": "CRPF sponsored placement linked skill development training for life sciences sector"
       }
     ]
   },
@@ -198,8 +216,7 @@
   ],
   "languages": [
     "Telugu",
-    "English",
-    "Hindi"
+    "English"
   ],
   "achievements": [
     "Featured in newspapers for impactful training sessions on interview skills and personality development.",
@@ -218,7 +235,7 @@
   "personalDetails": {
     "dob": "13th May 1993",
     "nationality": "Indian",
-    "languages": "Telugu, English, Hindi",
+    "languages": "Telugu, English",
     "location": "Visakhapatnam, Andhra Pradesh"
   },
   "personalSnapshot": {
