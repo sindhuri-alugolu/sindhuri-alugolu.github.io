@@ -1,0 +1,1059 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta property="og:title" content="Sindhuri Alugolu — Soft Skills Trainer" />
+  <meta property="og:description" content="Communication Specialist | Curriculum Designer | Corporate Trainer" />
+  <meta property="og:image" content="images/sindhu.png" />
+  <title>Sindhuri Alugolu — Soft Skills Trainer</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #f8fafc;
+      --surface: #ffffff;
+      --text: #0f172a;
+      --text-muted: #64748b;
+      --border: #e2e8f0;
+      --accent: #0f766e;
+      --accent-light: #14b8a6;
+      --accent-dark: #115e59;
+      --hero-from: #0f172a;
+      --hero-to: #134e4a;
+      --shadow: 0 4px 24px rgba(15, 23, 42, 0.08);
+      --shadow-lg: 0 20px 50px rgba(15, 23, 42, 0.12);
+      --radius: 14px;
+      --nav-h: 72px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; scroll-padding-top: var(--nav-h); }
+
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    h1, h2, h3, .logo {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-weight: 600;
+      line-height: 1.2;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    img { max-width: 100%; display: block; }
+
+    .container {
+      width: min(1120px, calc(100% - 2.5rem));
+      margin-inline: auto;
+    }
+
+    /* ── Nav ── */
+    .nav {
+      position: fixed;
+      inset: 0 0 auto 0;
+      height: var(--nav-h);
+      z-index: 100;
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      transition: box-shadow 0.3s;
+    }
+
+    .nav.scrolled { box-shadow: var(--shadow); }
+
+    .nav-inner {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-size: 1.15rem;
+      color: var(--accent-dark);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: var(--text-muted);
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover { color: var(--accent); }
+
+    .nav-toggle {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 1.25rem;
+      color: var(--text);
+      cursor: pointer;
+    }
+
+    /* ── Hero ── */
+    .hero {
+      padding: calc(var(--nav-h) + 4rem) 0 5rem;
+      background: linear-gradient(145deg, var(--hero-from) 0%, var(--hero-to) 100%);
+      color: #fff;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at 20% 80%, rgba(20, 184, 166, 0.15) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.06) 0%, transparent 40%);
+      pointer-events: none;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 3rem;
+      align-items: center;
+      position: relative;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.4rem 1rem;
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 999px;
+      font-size: 0.8rem;
+      font-weight: 500;
+      letter-spacing: 0.03em;
+      margin-bottom: 1.25rem;
+    }
+
+    .hero-badge i { color: var(--accent-light); }
+
+    .hero h1 {
+      font-size: clamp(2.25rem, 5vw, 3.25rem);
+      margin-bottom: 0.75rem;
+    }
+
+    .hero-title {
+      font-size: 1.15rem;
+      color: #99f6e4;
+      font-weight: 400;
+      margin-bottom: 1.25rem;
+    }
+
+    .hero-bio {
+      max-width: 540px;
+      color: #cbd5e1;
+      font-size: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.75rem 1.5rem;
+      border-radius: 999px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
+    }
+
+    .btn:hover { transform: translateY(-2px); }
+
+    .btn-primary {
+      background: var(--accent-light);
+      color: #fff;
+      box-shadow: 0 4px 20px rgba(20, 184, 166, 0.4);
+    }
+
+    .btn-primary:hover { background: #2dd4bf; }
+
+    .btn-outline {
+      background: transparent;
+      color: #fff;
+      border: 1.5px solid rgba(255, 255, 255, 0.35);
+    }
+
+    .btn-outline:hover {
+      background: rgba(255, 255, 255, 0.1);
+      border-color: rgba(255, 255, 255, 0.6);
+    }
+
+    .hero-photo-wrap {
+      position: relative;
+    }
+
+    .hero-photo {
+      width: 260px;
+      height: 260px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid rgba(255, 255, 255, 0.25);
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.35);
+    }
+
+    .hero-photo-ring {
+      position: absolute;
+      inset: -12px;
+      border-radius: 50%;
+      border: 2px dashed rgba(20, 184, 166, 0.4);
+      animation: spin 30s linear infinite;
+    }
+
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    .hero-location {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      margin-top: 1.5rem;
+      font-size: 0.875rem;
+      color: #94a3b8;
+    }
+
+    /* ── Stats ── */
+    .stats {
+      margin-top: -2.5rem;
+      position: relative;
+      z-index: 2;
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1rem;
+      background: var(--surface);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-lg);
+      padding: 1.75rem 2rem;
+      border: 1px solid var(--border);
+    }
+
+    .stat-item { text-align: center; }
+
+    .stat-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--accent-dark);
+      line-height: 1;
+    }
+
+    .stat-label {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      margin-top: 0.35rem;
+      font-weight: 500;
+    }
+
+    /* ── Sections ── */
+    section { padding: 5rem 0; }
+
+    .section-header {
+      margin-bottom: 2.5rem;
+    }
+
+    .section-label {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.5rem;
+    }
+
+    .section-header h2 {
+      font-size: clamp(1.75rem, 3vw, 2.25rem);
+      color: var(--text);
+    }
+
+    .section-header p {
+      margin-top: 0.75rem;
+      color: var(--text-muted);
+      max-width: 600px;
+    }
+
+    /* ── About ── */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 2.5rem;
+      align-items: start;
+    }
+
+    .about-text p {
+      color: var(--text-muted);
+      margin-bottom: 1rem;
+    }
+
+    .competency-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.75rem;
+    }
+
+    .competency-item {
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+      padding: 0.75rem 1rem;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+
+    .competency-item:hover {
+      border-color: var(--accent-light);
+      box-shadow: var(--shadow);
+    }
+
+    .competency-item i {
+      color: var(--accent);
+      font-size: 0.75rem;
+    }
+
+    /* ── Timeline ── */
+    .timeline { position: relative; }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: linear-gradient(to bottom, var(--accent-light), var(--border));
+    }
+
+    .timeline-item {
+      position: relative;
+      padding-left: 2rem;
+      padding-bottom: 2.5rem;
+    }
+
+    .timeline-item:last-child { padding-bottom: 0; }
+
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -5px;
+      top: 6px;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: var(--accent-light);
+      border: 2px solid var(--surface);
+      box-shadow: 0 0 0 2px var(--accent-light);
+    }
+
+    .timeline-date {
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--accent);
+      margin-bottom: 0.35rem;
+    }
+
+    .timeline-item h3 {
+      font-family: 'Inter', sans-serif;
+      font-size: 1.05rem;
+      font-weight: 700;
+      margin-bottom: 0.75rem;
+      color: var(--text);
+    }
+
+    .timeline-item ul {
+      list-style: none;
+      display: grid;
+      gap: 0.45rem;
+    }
+
+    .timeline-item li {
+      font-size: 0.875rem;
+      color: var(--text-muted);
+      padding-left: 1rem;
+      position: relative;
+    }
+
+    .timeline-item li::before {
+      content: '›';
+      position: absolute;
+      left: 0;
+      color: var(--accent-light);
+      font-weight: 700;
+    }
+
+    .timeline-toggle {
+      margin-top: 1.5rem;
+      background: none;
+      border: 1.5px solid var(--border);
+      color: var(--accent-dark);
+      padding: 0.65rem 1.25rem;
+      border-radius: 999px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .timeline-toggle:hover {
+      border-color: var(--accent);
+      background: rgba(20, 184, 166, 0.06);
+    }
+
+    .timeline-older { display: none; }
+    .timeline-older.show { display: block; }
+
+    /* ── Projects ── */
+    .projects-section { background: var(--surface); }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+    }
+
+    .project-card {
+      background: var(--bg);
+      border-radius: var(--radius);
+      overflow: hidden;
+      border: 1px solid var(--border);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .project-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .project-card img {
+      width: 100%;
+      aspect-ratio: 16/9;
+      object-fit: cover;
+      object-position: top;
+    }
+
+    .project-body { padding: 1.25rem 1.5rem 1.5rem; }
+
+    .project-tag {
+      display: inline-block;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--accent);
+      background: rgba(20, 184, 166, 0.1);
+      padding: 0.25rem 0.65rem;
+      border-radius: 999px;
+      margin-bottom: 0.65rem;
+    }
+
+    .project-body h3 {
+      font-family: 'Inter', sans-serif;
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: 0.75rem;
+    }
+
+    .project-meta {
+      display: grid;
+      gap: 0.3rem;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    .project-meta strong { color: var(--text); font-weight: 600; }
+
+    /* ── Skills & Education ── */
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.75rem;
+      box-shadow: var(--shadow);
+    }
+
+    .card h3 {
+      font-family: 'Inter', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin-bottom: 1.25rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .card h3 i { color: var(--accent); }
+
+    .edu-item {
+      padding-bottom: 1rem;
+      margin-bottom: 1rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .edu-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+
+    .edu-degree { font-weight: 600; font-size: 0.9rem; }
+    .edu-school { font-size: 0.8rem; color: var(--text-muted); margin-top: 0.2rem; }
+
+    .skill-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .skill-tag {
+      padding: 0.4rem 0.85rem;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: var(--text-muted);
+    }
+
+    /* ── Achievements ── */
+    .achievements-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+    }
+
+    .achievement-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      transition: box-shadow 0.3s, border-color 0.3s;
+    }
+
+    .achievement-card:hover {
+      box-shadow: var(--shadow);
+      border-color: var(--accent-light);
+    }
+
+    .achievement-card i {
+      font-size: 1.25rem;
+      color: var(--accent);
+      margin-bottom: 0.75rem;
+    }
+
+    .achievement-card p {
+      font-size: 0.875rem;
+      color: var(--text-muted);
+    }
+
+    /* ── Contact ── */
+    .contact-section {
+      background: linear-gradient(145deg, var(--hero-from) 0%, var(--hero-to) 100%);
+      color: #fff;
+      text-align: center;
+      padding: 4rem 0;
+    }
+
+    .contact-section h2 {
+      font-size: clamp(1.75rem, 3vw, 2.25rem);
+      margin-bottom: 0.75rem;
+    }
+
+    .contact-section p {
+      color: #94a3b8;
+      margin-bottom: 2rem;
+      max-width: 480px;
+      margin-inline: auto;
+    }
+
+    .contact-links {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .contact-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      padding: 0.85rem 1.75rem;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 999px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: background 0.2s, transform 0.2s;
+    }
+
+    .contact-link:hover {
+      background: rgba(255, 255, 255, 0.15);
+      transform: translateY(-2px);
+    }
+
+    .contact-link i { color: var(--accent-light); }
+
+    /* ── Footer ── */
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      border-top: 1px solid var(--border);
+      background: var(--surface);
+    }
+
+    /* ── Reveal animation ── */
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 900px) {
+      .hero-grid { grid-template-columns: 1fr; text-align: center; }
+      .hero-photo-wrap { order: -1; justify-self: center; }
+      .hero-bio { margin-inline: auto; }
+      .hero-actions { justify-content: center; }
+      .hero-location { justify-content: center; }
+      .hero-photo { width: 200px; height: 200px; }
+      .stats-grid { grid-template-columns: repeat(2, 1fr); }
+      .about-grid, .two-col, .projects-grid, .achievements-grid { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 640px) {
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: var(--nav-h);
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        gap: 0;
+        background: var(--surface);
+        border-bottom: 1px solid var(--border);
+        padding: 1rem 0;
+        box-shadow: var(--shadow);
+      }
+
+      .nav-links.open { display: flex; }
+
+      .nav-links li a {
+        display: block;
+        padding: 0.75rem 1.25rem;
+      }
+
+      .nav-toggle { display: block; }
+      .competency-grid { grid-template-columns: 1fr; }
+      .stats-grid { grid-template-columns: 1fr 1fr; padding: 1.25rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav" id="nav">
+    <div class="container nav-inner">
+      <a href="#" class="logo">Sindhuri Alugolu</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+        <i class="fas fa-bars"></i>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header class="hero">
+    <div class="container hero-grid">
+      <div>
+        <div class="hero-badge"><i class="fas fa-star"></i> Available for Training & Consulting</div>
+        <h1>Sindhuri Alugolu</h1>
+        <p class="hero-title">Soft Skills Trainer &nbsp;·&nbsp; Communication Specialist</p>
+        <p class="hero-bio">
+          Empowering learners across hospitality, aviation, corporate, and academic sectors through
+          engaging communication training, curriculum design, and workplace readiness programs.
+        </p>
+        <div class="hero-actions">
+          <a href="tel:+919390828532" class="btn btn-primary"><i class="fas fa-phone"></i> +91 9390828532</a>
+          <a href="mailto:sindhudimple.08@gmail.com" class="btn btn-outline"><i class="fas fa-envelope"></i> Email Me</a>
+        </div>
+        <p class="hero-location"><i class="fas fa-map-marker-alt"></i> Visakhapatnam, Andhra Pradesh</p>
+      </div>
+      <div class="hero-photo-wrap">
+        <div class="hero-photo-ring"></div>
+        <img src="images/sindhu.png" alt="Sindhuri Alugolu" class="hero-photo" />
+      </div>
+    </div>
+  </header>
+
+  <!-- Stats -->
+  <div class="stats">
+    <div class="container stats-grid reveal">
+      <div class="stat-item">
+        <div class="stat-num">7,000+</div>
+        <div class="stat-label">Students Trained</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">200+</div>
+        <div class="stat-label">Batches Delivered</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">10+</div>
+        <div class="stat-label">Years Experience</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">3</div>
+        <div class="stat-label">Languages</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- About -->
+  <section id="about">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">About Me</span>
+        <h2>Transforming Communication,<br />Building Confidence</h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-text reveal">
+          <p>
+            Dedicated Soft Skills Trainer and freelance content creator with extensive experience training learners
+            across hospitality, aviation, IT, and corporate sectors. Skilled in curriculum design, webinar facilitation,
+            and delivering engaging programs focused on communication, interpersonal skills, and professional development.
+          </p>
+          <p>
+            Proven contribution to community development through impactful CSR initiatives, government college workshops
+            under PM-USHA GIEI Scheme, and corporate training programs. A sanguine and adaptable professional with a
+            passion for empowering others to reach their full potential.
+          </p>
+        </div>
+        <div class="competency-grid reveal">
+          <div class="competency-item"><i class="fas fa-check"></i> Communication & Public Speaking</div>
+          <div class="competency-item"><i class="fas fa-check"></i> Soft Skills & Personality Dev.</div>
+          <div class="competency-item"><i class="fas fa-check"></i> Curriculum Design & Delivery</div>
+          <div class="competency-item"><i class="fas fa-check"></i> Training Needs Analysis</div>
+          <div class="competency-item"><i class="fas fa-check"></i> Interview & Workplace Readiness</div>
+          <div class="competency-item"><i class="fas fa-check"></i> Leadership & Team Building</div>
+          <div class="competency-item"><i class="fas fa-check"></i> Employee Development</div>
+          <div class="competency-item"><i class="fas fa-check"></i> CSR & Community Engagement</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience -->
+  <section id="experience" style="background: var(--surface);">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">Career</span>
+        <h2>Professional Experience</h2>
+        <p>A decade of training excellence across corporate, academic, and community settings.</p>
+      </div>
+      <div class="timeline reveal">
+        <div class="timeline-item">
+          <div class="timeline-date">2024 – Present · ~2 years</div>
+          <h3>Freelancer — Content Creation & Curriculum Design · Vasishta 360 Channel</h3>
+          <ul>
+            <li>Curated engaging English language curriculums for diverse learner groups</li>
+            <li>Conceptualized and conducted interactive webinars on vocabulary and communication</li>
+            <li>Created video content leveraging storytelling and real-life examples</li>
+            <li>Collaborated on impactful learning resources boosting engagement and retention</li>
+          </ul>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-date">Aug 2024 – Present · ~1–2 years</div>
+          <h3>English Language cum Soft Skills Trainer · CMS Labs & SDI</h3>
+          <ul>
+            <li>Impart English language skills under the Skill Development Institute collaboration</li>
+            <li>Integrated soft skills training as a key employability factor for trainees</li>
+            <li>Develop programs for engineering and degree college students</li>
+            <li>Implement CSR programs sponsored by CRPF-230 Battalion</li>
+          </ul>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-date">2024 – Present · ~1–2 years</div>
+          <h3>Consultant Faculty — Etiquette Trainer · Sumedha Hotel Management & Aviation</h3>
+          <ul>
+            <li>Consultant and guest faculty for hotel management and aviation colleges</li>
+            <li>Industry-relevant etiquette and soft skills programs for hospitality sector</li>
+            <li>Customer service, leadership, and confident self-presentation training</li>
+          </ul>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-date">2024 – 2025 · ~1 year</div>
+          <h3>Consultant — Communication & Soft Skills Trainer · ShriG's Dockyard Programs</h3>
+          <ul>
+            <li>Specialized communication training for dockyard employees</li>
+            <li>Customized methodologies for high-performance technical environments</li>
+            <li>Workplace readiness and professional communication programs</li>
+          </ul>
+        </div>
+
+        <div class="timeline-older" id="olderExperience">
+          <div class="timeline-item">
+            <div class="timeline-date">May 2023 – Feb 2023</div>
+            <h3>Manager · Libonji Creations, Chingola, Zambia</h3>
+            <ul>
+              <li>Managed operations, employee relations, and compliance at a recreational center</li>
+              <li>Designed and conducted training workshops for employees</li>
+            </ul>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">Jan – Apr 2021</div>
+            <h3>Consultant Facilitator — Soft Skills · SIGIAT, Visakhapatnam</h3>
+            <ul>
+              <li>Facilitated sessions on communication, interview techniques, and corporate etiquette</li>
+            </ul>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">Jun 2016 – Dec 2018</div>
+            <h3>Communication & Soft Skills Trainer · Bhagavatula Charitable Trust</h3>
+            <ul>
+              <li>Delivered training across three SMART centers</li>
+              <li>Spearheaded placement-linked training under Tech Mahindra Foundation CSR</li>
+            </ul>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">Nov 2015 – Apr 2016</div>
+            <h3>Soft Skills Facilitator · Vision Software Solutions</h3>
+            <ul>
+              <li>Conducted soft skills workshops for government-sponsored projects</li>
+            </ul>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">Oct 2014 – Oct 2015</div>
+            <h3>Communication & Soft Skills Trainer · SIGIAT</h3>
+            <ul>
+              <li>Employment readiness training under Tech Mahindra Foundation CSR initiatives</li>
+            </ul>
+          </div>
+        </div>
+
+        <button class="timeline-toggle" id="toggleExperience">
+          <i class="fas fa-chevron-down"></i> Show Earlier Experience
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="projects-section">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">Featured Work</span>
+        <h2>Workshops & Projects</h2>
+        <p>Government college workshops conducted as Resource Person through CMS Skill Center under PM-USHA GIEI Scheme.</p>
+      </div>
+      <div class="projects-grid">
+        <article class="project-card reveal">
+          <img src="images/workshop-personality-development.png" alt="Personality Development Workshop — Government Degree College, Paderu" />
+          <div class="project-body">
+            <span class="project-tag">Jan 2026</span>
+            <h3>Personality Development for Confident Self-Presentation</h3>
+            <div class="project-meta">
+              <span><strong>Role:</strong> Resource Person — Corporate Trainer</span>
+              <span><strong>Organised by:</strong> Govt. Degree College, Paderu (A.S.R District)</span>
+              <span><strong>Conducted by:</strong> Crystal Management Services (CMS Skill Center)</span>
+            </div>
+          </div>
+        </article>
+        <article class="project-card reveal">
+          <img src="images/workshop-domestic-violence.png" alt="Domestic Violence Awareness Workshop — Government Degree College (Women), Marripalem" />
+          <div class="project-body">
+            <span class="project-tag">Jan 2026</span>
+            <h3>Understanding & Addressing Domestic Violence</h3>
+            <div class="project-meta">
+              <span><strong>Role:</strong> Resource Person — Corporate Trainer</span>
+              <span><strong>Organised by:</strong> Govt. Degree College (Women), Marripalem</span>
+              <span><strong>Conducted by:</strong> Crystal Management Services (CMS Skill Center)</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills & Education -->
+  <section id="skills">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">Background</span>
+        <h2>Education & Skills</h2>
+      </div>
+      <div class="two-col reveal">
+        <div class="card">
+          <h3><i class="fas fa-graduation-cap"></i> Education</h3>
+          <div class="edu-item">
+            <div class="edu-degree">B.Tech — Information Technology</div>
+            <div class="edu-school">Aditya College of Engineering & IT, JNTU Kakinada</div>
+          </div>
+          <div class="edu-item">
+            <div class="edu-degree">Higher Secondary (Intermediate)</div>
+            <div class="edu-school">Narayana Junior College, Visakhapatnam</div>
+          </div>
+          <div class="edu-item">
+            <div class="edu-degree">Class X (Secondary)</div>
+            <div class="edu-school">Prathibha Public School, Visakhapatnam</div>
+          </div>
+        </div>
+        <div class="card">
+          <h3><i class="fas fa-laptop-code"></i> Technical Skills</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">MS Office</span>
+            <span class="skill-tag">Windows OS</span>
+            <span class="skill-tag">Curriculum Design Tools</span>
+            <span class="skill-tag">C</span>
+            <span class="skill-tag">Java</span>
+            <span class="skill-tag">PHP</span>
+            <span class="skill-tag">Android</span>
+          </div>
+          <h3 style="margin-top: 1.5rem;"><i class="fas fa-language"></i> Languages</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">Telugu</span>
+            <span class="skill-tag">English</span>
+            <span class="skill-tag">Hindi</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Achievements -->
+  <section style="background: var(--surface); padding-bottom: 3rem;">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">Recognition</span>
+        <h2>Achievements & Highlights</h2>
+      </div>
+      <div class="achievements-grid reveal">
+        <div class="achievement-card">
+          <i class="fas fa-newspaper"></i>
+          <p>Featured in newspapers for impactful training on interview skills and personality development</p>
+        </div>
+        <div class="achievement-card">
+          <i class="fas fa-users"></i>
+          <p>Trained over 7,000 students across 200+ batches in soft skills and communication</p>
+        </div>
+        <div class="achievement-card">
+          <i class="fas fa-award"></i>
+          <p>Recognized for effective business communication training and email etiquette programs</p>
+        </div>
+        <div class="achievement-card">
+          <i class="fas fa-handshake"></i>
+          <p>Selected for interview panels assessing soft skills trainer candidates</p>
+        </div>
+        <div class="achievement-card">
+          <i class="fas fa-paw"></i>
+          <p>Active animal rights activist and rescuer — volunteer at VSPCA</p>
+        </div>
+        <div class="achievement-card">
+          <i class="fas fa-pen-fancy"></i>
+          <p>Published writer of short tales, quotes, and social articles</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="contact-section">
+    <div class="container reveal">
+      <h2>Let's Connect</h2>
+      <p>Open to corporate training, guest faculty roles, curriculum consulting, and workshop facilitation.</p>
+      <div class="contact-links">
+        <a href="tel:+919390828532" class="contact-link"><i class="fas fa-phone"></i> +91 9390828532</a>
+        <a href="mailto:sindhudimple.08@gmail.com" class="contact-link"><i class="fas fa-envelope"></i> sindhudimple.08@gmail.com</a>
+        <a href="https://maps.google.com/?q=Visakhapatnam,Andhra+Pradesh" class="contact-link" target="_blank" rel="noopener"><i class="fas fa-map-marker-alt"></i> Visakhapatnam, A.P.</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">&copy; 2026 Sindhuri Alugolu · Soft Skills Trainer & Communication Specialist</div>
+  </footer>
+
+  <script>
+    const nav = document.getElementById('nav');
+    const navToggle = document.getElementById('navToggle');
+    const navLinks = document.getElementById('navLinks');
+
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 20);
+    });
+
+    navToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('open');
+      navToggle.querySelector('i').classList.toggle('fa-bars');
+      navToggle.querySelector('i').classList.toggle('fa-times');
+    });
+
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => navLinks.classList.remove('open'));
+    });
+
+    const toggleBtn = document.getElementById('toggleExperience');
+    const olderExp = document.getElementById('olderExperience');
+    let expanded = false;
+
+    toggleBtn.addEventListener('click', () => {
+      expanded = !expanded;
+      olderExp.classList.toggle('show', expanded);
+      toggleBtn.innerHTML = expanded
+        ? '<i class="fas fa-chevron-up"></i> Hide Earlier Experience'
+        : '<i class="fas fa-chevron-down"></i> Show Earlier Experience';
+    });
+
+    const revealObserver = new IntersectionObserver(
+      entries => entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); }),
+      { threshold: 0.1, rootMargin: '0px 0px -40px 0px' }
+    );
+
+    document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+  </script>
+</body>
+</html>
